@@ -4,4 +4,42 @@ format: html
 editor: visual
 ---
 
-## Composition 2
+```{r}
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Basic Data Exploration
+
+-   names: get labels for each data set
+
+-   dim: get data dimensions
+
+-   head: get first n lines (6 by default)
+
+-   tail: get last n lines (6 by default)
+
+-   summary: get basic summary statistics
+
+```{r}
+names(penguins)
+
+dim(penguins)
+
+head(penguins)
+
+tail(penguins)
+
+summary(penguins)
+```
+
+```{r}
+skim(penguins)
+#if this function is the same as from another package say skimr::skin() to get skim from that specific package
+```
+
+```{r}
+ggpairs(penguins)
+```
